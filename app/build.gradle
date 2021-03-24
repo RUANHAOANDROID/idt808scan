@@ -29,7 +29,10 @@ android {
             signingConfig signingConfigs.config
         }
     }
-
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {
