@@ -5,20 +5,31 @@ android {
     buildToolsVersion "25.0.0"
 
     defaultConfig {
+        versionCode = 154
+        versionName = "1.5.4"
         applicationId "com.unistring_hitown.idcard"
         minSdkVersion 17
         targetSdkVersion 22
-        ndk{
+        ndk {
             abiFilters "armeabi"
         }
     }
-
+    signingConfigs {
+        config {
+            keyAlias 'idcard'
+            keyPassword 'unistrong_idcard'
+            storeFile file('..//Unistrong.jks')
+            storePassword 'unistrong'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.config
         }
     }
+
 }
 
 dependencies {
