@@ -184,7 +184,7 @@ public class ReadIDCardAIDLService extends Service {
     }
 
     private static void updateGuidInfo(int arg1, int arg2, Object obj) {
-        Log.v("IdcardScanActivity", "updateGuidInfo:arg1 = " + arg1);
+        Log.v(TAG, "updateGuidInfo:arg1 = " + arg1);
         switch (arg1) {
             /**设备连接成功*/
             case IdCardHitown.RESULT_INIT_SUCCED:

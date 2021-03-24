@@ -115,7 +115,8 @@ public class ScanActivity extends Activity{
 			}			
 		}
 	};
-	
+	private boolean isOtherOpen;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -127,6 +128,8 @@ public class ScanActivity extends Activity{
 		idtService.setAction("android.intent.action.ReadIDCardAIDLService");
 		idtService.setPackage("cn.com.hnisi.service");
 		isModelOpened = bindService(idtService, mSConn, Service.BIND_AUTO_CREATE);
+		isOtherOpen=getIntent()!=null&&getIntent().getDataString()!=null&&getIntent().getDataString().equals("idcard://dev.unistrong.com");
+
 	}
 
 	
@@ -210,28 +213,52 @@ public class ScanActivity extends Activity{
 	}
 
 	private void updateInfo(Map map) {
-		mPhoto.setImageBitmap((Bitmap) map.get("photo"));
-		mName.setText(map.get("name").toString());
-		mSex.setText(map.get("sex").toString());	
+		Intent result =new Intent();
 
-		mBirthday.setText(map.get("birthday").toString());
-		mCardNum.setText(map.get("idCode").toString());
-		mAddress.setText(map.get("address").toString());
-		mDepart.setText(map.get("department").toString());
-		mDate.setText(map.get("date").toString());
+		Bitmap photo = (Bitmap) map.get("photo");
+		result.putExtra("photo",photo);
+		mPhoto.setImageBitmap(photo);
+		String name = map.get("name").toString();
+		result.putExtra("name",name);
+		mName.setText(name);
+		String sex = map.get("sex").toString();
+		result.putExtra("sex",sex);
+		mSex.setText(sex);
 
-		if(map.get("category").toString().equalsIgnoreCase("GAT")){
+		String birthday = map.get("birthday").toString();
+		result.putExtra("birthday",birthday);
+		mBirthday.setText(birthday);
+		String idCode = map.get("idCode").toString();
+		result.putExtra("idCode",idCode);
+		mCardNum.setText(idCode);
+		String address = map.get("address").toString();
+		result.putExtra("address",address);
+		mAddress.setText(address);
+		String department = map.get("department").toString();
+		result.putExtra("department",department);
+		mDepart.setText(department);
+		String date = map.get("date").toString();
+		result.putExtra("date",date);
+		mDate.setText(date);
+
+		String category = map.get("category").toString();
+		result.putExtra("category",category);
+		if(category.equalsIgnoreCase("GAT")){
 			mCategory.setText("港澳通居住证");
 			mPassNumberLable.setVisibility(View.VISIBLE);
 			mPassNumber.setVisibility(View.VISIBLE);
-			mPassNumber.setText(map.get("passnumber").toString());					
+			String passnumber = map.get("passnumber").toString();
+			result.putExtra("passnumber",passnumber);
+			mPassNumber.setText(passnumber);
 			mNationLable.setVisibility(View.INVISIBLE);
 			mNation.setVisibility(View.INVISIBLE);			
 		}else{
 			mCategory.setText("二代身份证");
 			mNationLable.setVisibility(View.VISIBLE);
-			mNation.setVisibility(View.VISIBLE);	
-			mNation.setText(map.get("nation").toString());
+			mNation.setVisibility(View.VISIBLE);
+			String nation = map.get("nation").toString();
+			result.putExtra("nation",nation);
+			mNation.setText(nation);
 			mPassNumberLable.setVisibility(View.INVISIBLE);
 			mPassNumber.setVisibility(View.INVISIBLE);
 		}
@@ -246,6 +273,10 @@ public class ScanActivity extends Activity{
 			}			
 		}else{
 			mFinger.setText("该卡未查询到有录入指纹信息");
+		}
+		if (isOtherOpen){
+			setResult(Activity.RESULT_OK,result);
+			finish();
 		}
 	}
 }

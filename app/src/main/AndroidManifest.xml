@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.unistring_hitown.idcard"
     android:versionCode="154"
-    android:versionName="1.5.4" >
+    android:versionName="1.5.4">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <!-- <uses-permission android:name="android.permission.DEVICE_POWER" /> system权限 -->
@@ -14,27 +14,34 @@
         android:allowBackup="true"
         android:icon="@drawable/idcard_icon"
         android:label="@string/idcard_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name="com.hitown.idcard.ScanActivity"
             android:label="@string/idcard_name"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="dev.unistrong.com"
+                    android:scheme="idcard" />
+            </intent-filter>
         </activity>
-        
-        <service android:name="cn.com.hnisi.service.ReadIDCardAIDLService" 
-            >
+
+        <service android:name="cn.com.hnisi.service.ReadIDCardAIDLService">
             <intent-filter>
                 <action android:name="android.intent.action.ReadIDCardAIDLService" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
+
     </application>
 
 </manifest>
