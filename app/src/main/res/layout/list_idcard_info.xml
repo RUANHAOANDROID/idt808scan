@@ -1,0 +1,318 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="158dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="9dip"
+        android:background="#37383a" >
+
+        <ImageView
+            android:id="@+id/idcard_info_photo"
+            android:layout_width="158dip"
+            android:layout_height="158dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/idcard_defphoto" />
+
+        <TextView
+            android:id="@+id/idcard_info_warning"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#7dff0000"
+            android:gravity="center"
+            android:text="@string/idcard_info_warning"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip" >
+
+         <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dip"
+                android:paddingLeft="8dip"
+                android:text="@string/idcard_category_name"
+                android:textColor="#3e3e40"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/idcard_category"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </TableRow>
+        
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="10dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dip"
+                android:paddingLeft="8dip"
+                android:text="@string/idcard_info_name"
+                android:textColor="#3e3e40"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/idcard_name"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="7dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dip"
+                android:paddingLeft="8dip"
+                android:text="@string/idcard_info_sex"
+                android:textColor="#3e3e40"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/idcard_sex"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="7dip" >
+
+            <TextView
+                     android:id="@+id/idcard_nation_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dip"
+                android:paddingLeft="8dip"
+                android:text="@string/idcard_info_nation"
+                android:textColor="#3e3e40"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/idcard_nation"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="7dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dip"
+                android:paddingLeft="8dip"
+                android:text="@string/idcard_info_birthday"
+                android:textColor="#3e3e40"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/idcard_birthday"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="7dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dip"
+                android:paddingLeft="8dip"
+                android:text="@string/idcard_info_num"
+                android:textColor="#3e3e40"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/idcard_num"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="7dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dip"
+                android:paddingLeft="8dip"
+                android:text="@string/idcard_info_address"
+                android:textColor="#3e3e40"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/idcard_address"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="7dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dip"
+                android:paddingLeft="8dip"
+                android:text="@string/idcard_info_department"
+                android:textColor="#3e3e40"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/idcard_department"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="7dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dip"
+                android:paddingLeft="8dip"
+                android:text="@string/idcard_info_date"
+                android:textColor="#3e3e40"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/idcard_date"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="7dip" >
+
+            <TextView
+                android:id="@+id/idcard_fingers_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dip"
+                android:paddingLeft="8dip"
+                android:text="@string/idcard_info_fingers"
+                android:textColor="#3e3e40"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/idcard_fingers"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </TableRow>
+        
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:text="关闭" />
+
+        <Button
+            android:id="@+id/btn_open"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:text="打开" />
+    </LinearLayout>
+        
+           <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="7dip" >
+
+            <TextView     
+                   android:id="@+id/gat_passnumber_lable"  
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dip"
+                android:paddingLeft="8dip"
+                android:text="@string/gat_passnumber"
+                android:textColor="#3e3e40"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/gat_passnumber"
+                android:layout_width="240dip"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </TableRow>
+         
+    </TableLayout>
+
+</LinearLayout>

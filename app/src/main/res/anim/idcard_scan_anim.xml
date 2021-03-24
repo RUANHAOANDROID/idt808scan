@@ -1,0 +1,18 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+
+    <item
+        android:drawable="@drawable/idcard_scan_01"
+        android:duration="150"/>
+    <item
+        android:drawable="@drawable/idcard_scan_02"
+        android:duration="150"/>
+    <item
+        android:drawable="@drawable/idcard_scan_03"
+        android:duration="150"/>
+    <item
+        android:drawable="@drawable/idcard_scan_04"
+        android:duration="150"/>
+  
+   
+</animation-list>

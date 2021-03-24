@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="action_settings">Settings</string>
+    <string name="app_name">二代身份证阅读器</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="Close">关闭</string>
+    <string name="Help">帮助</string>
+    <string name="Close_Read_Card">读卡</string>
+    <string name="Open_Read_Card">读卡</string>
+    <string name="Birth">出生:</string>
+    <string name="Nation">民族:</string>
+    <string name="Name">姓名:</string>
+    <string name="Gender">性别:</string>
+    <string name="Issue">签发机关:</string>
+    <string name="IDNo">公民身份号码:</string>
+    <string name="DayStart">有效期起始日期:</string>
+    <string name="DayEnd">有效期截止日期:</string>
+    <string name="Address">住址:</string>
+    <string name="CurrAddr">最新住址:</string>
+    <string name="Display">显示</string>
+    <string name="title_activity_idcard_reader">二代身份证阅读器</string>
+    <string name="title_activity_history_view">HistoryViewActivity</string>
+    <string name="title_activity_tiny_file_explorer">TinyFileExplorer</string>
+    <string name="title_activity_txtfile_view">TXTFileView</string>
+    <string name="title_activity_picture_file_view">PictureFileView</string>
+    <string name="open_module_success">打开设备成功！</string>
+    <string name="open_module_fail">打开设备失败！</string>
+    <string name="find_module_fail">找不到设备,请确认！</string>
+    <string name="open_module">打开设备</string>
+    <string name="close_module">关闭设备</string>
+    <string name="scan_single">单次扫描</string>
+    <string name="scan_more">连续扫描</string>
+    <string name="hint">提示</string>
+    <string name="openning_module">正在打开设备,请稍候！</string>
+    
+    
+    <!-- xx -->
+    
+    <string name="idcard_name">二代证读取驱动</string>
+    <string name="idcard_scan">二代证扫描测试</string>
+    <string name="idcard_finger_keys_read">指纹认证码测试</string>
+    <string name="main_idcard_info">二代证读取</string>
+    <string name="idcard_info_warning">该人员为获罪嫌疑人</string>
+    <string name="idcard_category_name">证件类型</string> 
+    <string name="idcard_info_name">姓 名</string>
+    <string name="idcard_info_sex">性 别</string>
+    <string name="idcard_info_nation">民 族</string>
+    <string name="idcard_info_birthday">生 日</string>
+    <string name="idcard_info_address">住 址</string>
+    <string name="idcard_info_num">身份证号</string>
+    <string name="idcard_info_department">签发机关</string>
+    <string name="idcard_info_date">有效期限</string>
+    <string name="idcard_info_fingers">指纹</string>
+    <string name="idcard_scan_guid">设备连接成功，请将二代证靠近感应区\n读取信息</string>
+     <string name="gat_passcount">签发次数</string>
+     <string name="gat_passnumber">通行证号码</string>
+</resources>
